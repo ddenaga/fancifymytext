@@ -10,14 +10,22 @@
         <!-- Your UI controls go here -->
         <fieldset>
             <legend>Text</legend>
-            <textarea rows="4" cols="30" />
+            <!-- 4 rows by 30 columns in size -->
+            <textarea id="text" rows="4" cols="30"/></textarea>
         </fieldset>
 
         <fieldset>
             <legend>Fancify</legend>
-            <button type="button" onclick="helloWorld()">Bigger!</button>
-            <input type="radio">FancyShmancy</input>
-            <input type="radio">BoringBetty</input>
+
+            <button type="button" onclick="enlargeText()">Bigger!</button>
+
+            <input id="fancy-opt" type="radio" name="style-opt" onclick="applyFancyStyles()">
+            <label for="fancy-opt">FancySchmancy</label>
+
+            <input id="boring-opt" type="radio" name="style-opt" onclick="resetStyles()">
+            <label for="boring-opt">BoringBetty</label>
+
+            <button type="button" onclick="applyMooStyles()">Moo</button>
         </fieldset>
     </body>
 </html>
